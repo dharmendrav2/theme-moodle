@@ -1,8 +1,55 @@
-
 <script type="text/javascript" src="<?php
                                     global $PAGE; if($PAGE->pagelayout !== 'frontpage')
                                         echo $CFG->wwwroot.'/theme/trending/javascript/jquery.min.js';
                                     ?>"></script>
+<script type="text/javascript">
+ 
+function myDiv(content){
+	if(content == "true"){
+		var currentBranch = $('.current_branch').html();
+		var cname = $('.active_tree_node').text();
+		$('.current_branch').removeClass('contains_branch');
+		$('.current_branch').removeClass('depth_3');
+		$('#page-course-view-topics .depth_3').remove();
+		$('#page-course-view-topics .type_course.depth_2').hide();
+		$('#page-course-view-topics .type_system.depth_2 > p').hide();
+		//$('.top-page-header, .internalbanner, #page-wrapper #page-footer, .social, .top-page-header .navbar, .top-header').css('display','none');
+		$('#page-course-view-topics .block_navigation .block_tree .depth_1>.tree_item.branch').hide();
+		$('#page-course-view-topics .block_navigation .block_tree p.hasicon').hide();
+		$('#page-course-view-topics .type_course .depth_2').hide();
+		
+		$('.top-page-header').hide();
+        $('.top-header').hide();
+        $('.internalbanner').hide();
+        $('.social').hide();
+        $('#page-footer').hide();
+	}
+	
+	if(content == "false"){
+		$('.top-page-header').show();
+        $('.top-header').show();
+        $('.internalbanner').show();
+        $('.social').show();
+        $('#page-footer').show();
+	}
+}
+</script>
+
+<?php if(isset($_SESSION['content'])){
+	$content = $_SESSION['content'];
+	
+	if($content == 'true'){
+		 echo '<script type="text/javascript">
+                 myDiv("true");
+            </script>';
+	}
+	if($content == 'false'){
+		 echo '<script type="text/javascript">
+                 myDiv("false");
+            </script>';
+	}
+}  ?>
+
 <script type="text/javascript">
    var categorytagline = "<?= $categorytagline ?>";
    var allcoursestagline = "<?= $allcoursestagline ?>";

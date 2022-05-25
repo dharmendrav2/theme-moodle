@@ -1,10 +1,51 @@
 {{!
 Page footer.
 }}
+
+<!-- Start Footer Section -->
+<footer id="page-footer">
+   <div class="container">
+   <ul class="ft-color">
+      <li>
+         <a class="left" href="">About Rewards Clouds</a>
+      </li>
+      <li>
+         <a class="left" href="">How it works</a>
+      </li>
+      <li>
+         <a class="left" href="">Support</a>
+      </li>
+   </ul>
+      
+      {{#googleplayurl}}
+      <ul class="privacy">
+         <li>
+            <a href="{{{googleplayurl}}}">
+            <img class="googleplayimg" src="{{config.wwwroot}}/theme/trending/pix/rc-google-play.jpg" alt="">
+            </a>
+            <a href="{{{googleplayurl}}}">
+            <img class="googleplayimg" src="{{config.wwwroot}}/theme/trending/pix/rc-app-store.jpg" alt="">
+            </a>
+         </li>
+      </ul>
+      {{/googleplayurl}}
+     <!-- {{{ output.standard_footer_html }}}-->
+      {{{ output.standard_end_of_body_html }}}
+   </div>
+</footer>
+<!-- End Footer Section -->
+<!-- Start Back To Top -->
+{{#backtotop}}
+<div id="backtotop" style="display: none;"> 
+   <a class="scrollup" href="javascript:void(0);" title="Go to top">
+   </a>
+</div>
+{{/backtotop}}
+<!-- End Back To Top -->
 <!-- Start Top Footer Section -->
 <div class="social">
    <div class="container">
-      <img src="{{{footerlogo}}}" alt="Footer_Logo"/>
+     <!-- <img src="{{{footerlogo}}}" alt="Footer_Logo"/> 
       <ul>
          {{#hasfacebook}}
          <li>
@@ -76,47 +117,30 @@ Page footer.
             </a>
          </li>
          {{/hasgithub}}
-      </ul>
-   </div>
-</div>
-<!-- End Top Footer Section -->
-<!-- Start Footer Section -->
-<footer id="page-footer">
-   <div class="container">
+      </ul>-->
       <ul class="copyright">
          {{#hascopyright}}
          <li>
-            <p class="copy">Copyright &copy; {{{copyrightY}}} {{{hascopyright}}} </p>
+            <p class="copy ft-color">© RewardsCloud. All Right Reserved </p>
          </li>
          {{/hascopyright}}
-         {{#privacypolicy}}
-         | 
-         <li> 
-            <a href="{{{privacypolicyurl}}}">
-            {{{privacypolicy}}}
-            </a>
-         </li>
-         {{/privacypolicy}}
       </ul>
-      {{#googleplayurl}}
-      <ul>
-         <li>
-            <a href="{{{googleplayurl}}}">
-            <img src="{{config.wwwroot}}/theme/trending/pix/googleplay.png" alt="">
+      {{#privacypolicy}}
+      <ul class="privacy">
+      <li>   
+      <a class="privacy left" href="http://18.215.164.158/">
+            Privacy Policy
             </a>
-         </li>
-      </ul>
-      {{/googleplayurl}}
-      {{{ output.standard_footer_html }}}
-      {{{ output.standard_end_of_body_html }}}
+	</li>
+      	<li>
+      <a class="privacy left" href="http://18.215.164.158/">
+            Terms & Conditions
+            </a> 
+        </li>
+        
+	</ul>
+      {{/privacypolicy}}
    </div>
-</footer>
-<!-- End Footer Section -->
-<!-- Start Back To Top -->
-{{#backtotop}}
-<div id="backtotop" style="display: none;"> 
-   <a class="scrollup" href="javascript:void(0);" title="Go to top">
-   </a>
 </div>
-{{/backtotop}}
-<!-- End Back To Top -->
+<!-- End Top Footer Section -->
+

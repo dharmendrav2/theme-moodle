@@ -67,26 +67,9 @@ Example context (json):
          </div>
       </div>
       <!-- End Enrolled Courses section -->
-      <!-- Start Marketing section -->
-      {{#displaymarketingsection}}
-      <div class="awesome-start">
-         <div class="container-fluid">
-            {{#marketingheading}}
-            <h1>{{{marketingheading}}}</h1>
-            {{/marketingheading}}
-            {{#marketingbuttontext}}
-            <a href="{{{marketingbuttonurl}}}" class="btn">{{{marketingbuttontext}}}</a>
-            {{/marketingbuttontext}}
-         </div>
-      </div>
-      {{/displaymarketingsection}}
-      <!-- End Marketing section -->
-      <!-- Start Tutors Section-->
-      {{>theme_trending/tutors}}
-      <!-- End Tutors Section-->
-      <!-- Start Students Section-->
-      {{>theme_trending/students}}
-      <!-- End Students Section-->
+      
+      
+      
       <div id="page-content">
          <div class="container">
             <div id="region-main-box" class="region-main">
@@ -108,7 +91,7 @@ Example context (json):
          </div>
       </div>
       <!-- Start Newsletter Section -->
-      {{>theme_trending/newsletter}}
+      <!--{{>theme_trending/newsletter}}-->
       <!-- End Newsletter Section -->
       {{{ output.standard_after_main_region_html }}}
       {{> theme_trending/footer }}
@@ -120,3 +103,4 @@ Example context (json):
 {{#js}}
 require(['theme_boost/loader']);
 {{/js}}
+

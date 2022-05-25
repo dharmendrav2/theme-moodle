@@ -29,39 +29,26 @@ Example context (json):
 "sitename": "Moodle Site"
 }
 }}
-<div class="top-header">
+
+<div class="fixed-nav-element"></div>
+<div id="nav-main" class="top-page-header">
+
    <div class="container">
-      <div class="row">
-         <div class="col-lg-6 col-md-6 col-sm-12 call">
-            <ul class="top-left customsearch">
+      <div class="float-left"><a class="logo" href="{{{ config.wwwroot }}}"><img src="{{{ logourl }}}" alt="logo"></a></div>
+
+      <nav class="navbar navbar-bootswatch navbar-expand moodle-has-zindex float-right">
+      <ul class="top-left customsearch">
                <li class="newsearch">
-                  <a href="{{config.wwwroot}}/course/" class="catalog">Catalog</a>
+                  <a href="{{config.wwwroot}}/course/" class="catalog cataloghide">Catalog</a>
                   <form role="form" class="form-inline searchbox" id="searchbox_demo" method="get" action="{{config.wwwroot}}/course/search.php" >
                      <div class="input-group search">
+                        <input type="submit" name="sa" value="" class="submit mag" />
                         <input type="text" placeholder="Search Courses" value="" name="search">
-                        <input type="submit" name="sa" value="" class="submit" />
                      </div>
                      <div class="clearfix"></div>
                   </form>
                </li>
             </ul>
-         </div>
-         <div class="col-lg-6 col-md-6 col-sm-12">
-            <ul class="top-right clearfix">
-               <li class="nav-item d-flex login float-right">
-                  {{>theme_trending/reg}}
-                  {{{ output.user_menu }}}
-               </li>
-            </ul>
-         </div>
-      </div>
-   </div>
-</div>
-<div class="fixed-nav-element"></div>
-<div id="nav-main" class="top-page-header">
-   <div class="container">
-      <div class="float-left"><a class="logo" href="{{{ config.wwwroot }}}"><img src="{{{ logourl }}}" alt="logo"></a></div>
-      <nav class="navbar navbar-bootswatch navbar-expand moodle-has-zindex float-right">
          <a href="{{{ config.wwwroot }}}" class="navbar-brand {{# output.should_display_navbar_logo }}has-logo{{/ output.should_display_navbar_logo }}
             {{^ output.should_display_navbar_logo }}
             d-none d-sm-inline
@@ -102,3 +89,20 @@ Example context (json):
       <div class="clearfix"></div>
    </div>
 </div>
+<div class="top-header">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-6 col-md-6 col-sm-12 call testgroup">
+         </div>
+         <div class="col-lg-6 col-md-6 col-sm-12">
+            <ul class="top-right clearfix">
+               <li class="nav-item d-flex login float-right">
+                  {{>theme_trending/reg}}
+                  {{{ output.user_menu }}} 
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</div>
+

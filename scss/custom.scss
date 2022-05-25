@@ -37,7 +37,7 @@ $sitevicolor:$sitevioletcolor !default;
 
 body {
   padding-top: 0;
-  font-family: "route159";
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 22px;
   color: grey;
@@ -136,7 +136,7 @@ td.submit input,
   background-color: $siteblcolor;
   border: 1px solid $siteblcolor;
   color: $white;
-  font-family: "Route159";
+  font-family: 'Roboto', sans-serif;
   text-shadow: none;
   border-radius: 0;
   box-shadow: none;
@@ -229,22 +229,23 @@ body.pagelayout-frontpage {
         display: none !important;
     }
 }
-.top-header {
+.top-page-header .navbar,.top-header {
   background-color: $white;
-  color: #606264;
+  color: #282829;
   text-transform: uppercase;
   font-size: 14px;
   line-height: normal;
   font-weight: bold;
-  border-bottom: 1px solid #ebebeb;
   ul.top-left.customsearch {
     margin-bottom: 0;
     padding-left: 0;
+    margin-right:40px;
     li.newsearch {
       background-color: #f5f5f5;
       border: 1px solid #d9d9d9;
       display: inline-block;
       margin: 10px 0;
+
       &:hover {
         background-color: #eee;
       }
@@ -279,13 +280,16 @@ body.pagelayout-frontpage {
         }
         input[type="submit"] {
           margin: 0;
-          background-color: transparent;
+          background-color: #fff;
           background-repeat: no-repeat;
           background-position: center center;
+          border:none;
           width: 45px;
-          height: 40px;
+          height: 30px;
           box-shadow: none;
-          border: none;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          border-color:#fff;
           outline: none;
           cursor: pointer;
           &:hover {
@@ -300,13 +304,13 @@ body.pagelayout-frontpage {
     li.nav-item {
         .loginsection{
             a {
-            color: #606264;
+            color: #282829;
             font-size: 12px !important;
             padding: 24px 20px;
             display: inline-block;
             letter-spacing: 1px;
-            border-right: 1px solid #ebebeb;
-            border-left: 1px solid #ebebeb;    
+           /* border-right: 1px solid #ebebeb;
+            border-left: 1px solid #ebebeb;  */  
             &:hover,
             &:active,
             &:focus {
@@ -322,10 +326,8 @@ body.pagelayout-frontpage {
           float: left;
           padding: 0;
           font-size: 0;
-          border-right: 1px solid #ebebeb;
-          border-left: 1px solid #ebebeb;
           a.dropdown-toggle {
-            color: #606264;
+            color: #282829;
             font-size: 12px !important;
             padding: 13px 20px;
             display: inline-block;
@@ -366,7 +368,7 @@ body.pagelayout-frontpage {
             }
             a.dropdown-item {
               display: block;
-              color: #606264;
+              color: #282829;
               padding: 6px 1em 6px 1em;
               text-transform: capitalize;
               font-weight: normal;
@@ -407,7 +409,7 @@ body.notloggedin {
     box-shadow: 0 1px 10px rgba(0,0,0,.1);
 }
 .top-page-header {
-  background-color: $white;
+  background-color: #eef4fa;
   padding: 0;
   z-index: 999;
   .theme-ddmenu {
@@ -433,7 +435,7 @@ body.notloggedin {
         font-size: 13px;
         font-weight: 600;
         text-transform: uppercase;
-        color: #606264;
+        color: #282829;
         letter-spacing: 1px;
         padding: 33px 20px !important;
         &:hover,
@@ -533,8 +535,6 @@ body.notloggedin {
       div.popover-region {
         margin-right: 0 !important;
         padding: 0 !important;
-        border-left: 1px solid #ebebeb;
-        border-right: 1px solid #ebebeb;
           float: left;
         .nav-link {
           padding: 36px 25px !important;
@@ -1379,7 +1379,7 @@ div[data-flexitour="step-background"] {
   padding: 4em 0;
   #frontpage-available-course-list {
     h2 {
-      font-family: "Times New Roman", Times, serif;
+      font-family: 'Roboto', sans-serif;
       text-align: center;
       color: $white;
       font-size: 2.5em;
@@ -1912,7 +1912,7 @@ body.pagelayout-frontpage {
   border-top: 2px solid #ccc;
   #frontpage-course-list {
     h2 {
-      font-family: "Times New Roman", Times, serif;
+      font-family: 'Roboto', sans-serif;
       text-align: center;
       color: #333;
       font-size: 2.5em;
@@ -2063,7 +2063,7 @@ body.pagelayout-frontpage {
     border-left: 50px solid transparent;
   }
   h1 {
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     color: $white;
     font-size: 2.5em;
@@ -2142,7 +2142,7 @@ body.pagelayout-frontpage {
       }
       .tutors-info {
         h5 {
-          font-family: "Times New Roman", Times, serif;
+          font-family: 'Roboto', sans-serif;
           color: #333;
           font-size: 1.5em;
           a {
@@ -2294,7 +2294,6 @@ body.pagelayout-frontpage {
   padding: 2em 0;
   text-align: center;
   color: $white;
-  margin-top: 2em;
   ul {
     margin: 0;
     margin-top: 20px;
@@ -2319,15 +2318,15 @@ body.pagelayout-frontpage {
   color: $white;
   border: none;
   text-align: center;
-  padding: 20px 0;
+  padding: 0px 0;
   ul {
     margin: 0;
     li {
       display: inline-block;
-      padding: 0 3px;
+      padding: 0.8rem .5rem;
       list-style: none;
       a {
-        color: #ccc;
+        color: #4f4f4f;
         text-decoration: none;
       }
     }
@@ -3298,7 +3297,7 @@ body#page-message-index #region-main {
       }
     }
   }
-  .top-header {
+  .top-page-header .navbar,.top-header {
     font-size: 13px !important;
   }
   a.logo {
@@ -3640,3 +3639,394 @@ body#page-message-index #region-main {
     }
   }
 }
+
+
+
+
+
+
+
+
+#allcourses #frontpage-available-course-list #allCoursesCarousel .owl-item:nth-child(odd) .visitlink a {
+    background-color: #218838!important;
+}
+
+#allcourses #frontpage-available-course-list .courses .coursebox .content .visitlink a {
+  background-color: #2f80ed!important;
+}
+
+#about .heading h2 {
+    color: #2a4f96 !important;
+}
+
+
+.top-header ul.top-right li.nav-item .usermenu .dropdown .dropdown-menu a.dropdown-item {
+    color: #94979b !important;
+}
+
+
+
+
+
+#page-footer {
+    background-color: #fffafa;
+}
+
+
+.awesome-start {
+    background-color: #2a4f96;
+}
+
+
+.awesome-start::after {
+    border-top: 50px solid #2a4f96;
+}
+
+
+
+#page-footer ul.copyright {
+            color: #282829;
+}    
+
+ 
+
+#page-footer ul.copyright a {
+    color: #282829;
+}
+
+
+#page-footer a {
+    color: #282829;
+}
+
+   
+#page-footer {
+   
+    background-color: #fffafa;
+   
+}
+
+.social {
+    background-color: #eef4fa;
+}
+
+
+.camera_caption>div {
+    background: #56ccf2;
+}
+
+#about .panel-default .panel-heading.active {
+    background: #2a4f96;
+}
+
+#about .panel-default .panel-heading.active .panel-title a.accordion-toggle i {
+    background: #56ccf2;
+}      
+
+
+#about .panel-default .panel-heading a.accordion-toggle i {
+    background: #56ccf2;
+}
+
+#backtotop a.scrollup {
+    background-color:#56ccf2;
+}    
+
+.awesome-start {
+    background-color: #2a4f96;
+}
+
+.awesome-start::after {
+    border-top: 50px solid #2a4f96;
+}
+
+.cameraContent .buttons a.btn {
+    background-color: #69c649;
+    border: 2px solid #69c649;
+}    
+
+
+.top-page-header .navbar .customsearch li.newsearch,
+.top-header ul.top-left.customsearch li.newsearch {
+    background-color: #ecf6fd;
+} 
+
+.btn-secondary {
+    color: #fff;
+    background-color: #2f80ed;
+}
+
+
+#page-navbar-con {
+    background-color: #ecf6fd;
+}        
+
+.block_calendar_month .content caption.calendar-controls{
+    background-color: #ecf6fd;
+}
+            
+          
+.block_calendar_month .content caption.calendar-controls a {
+    color: #282829;
+}
+ 
+
+.social ul li a {
+    color: #4f4f4f;
+}
+
+
+.block_calendar_month .content .next {
+       color: #3c4e8e !important;
+}
+.block_calendar_month .content caption.calendar-controls .previous {
+       color: #3c4e8e !important;
+}
+
+.social{
+  padding: 0px 0;
+}
+
+.copyright {
+  color: #828282 !important;
+  font-size: 0.700rem;
+  padding: 0.3rem;
+  float: left;
+  margin-bottom: 0rem;
+}
+
+.ft-color {
+  color: #828282 !important;
+  font-size: 0.700rem!important;
+  padding: 0.3rem!important;
+  float: left!important;
+  margin-bottom: 0rem!important;
+}
+
+.privacy{
+  color: #828282 !important;
+  font-size: 0.700rem!important;
+  float: right!important;
+  padding-top: 8px;
+}
+
+.privacy:hover{
+  color: #007bff !important;
+  font-size: 0.700rem!important;
+  float: right!important;
+  padding-top: 8px;
+}
+
+.social ul{
+  margin-top: 0px !important;
+}
+
+#news {
+  display:none;
+}
+
+.googleplayimg{
+    margin-top: -7px;
+}
+
+.googleplayimg:hover {
+    transform: translateY(-4px);
+    transition:0.3s;
+}
+
+#page-footer ul li a{
+  color:#4f4f4f!important;
+}
+
+#page-footer ul li a:hover{
+  color:#007bff!important;
+  
+}
+
+a.left
+{
+    position: relative;
+}
+
+a.left:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: .5px;
+  bottom: 0;
+  left: 0;
+  background-color: #007bff;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a.left:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
+
+
+/*header override CSS*/
+
+a.logo {
+  margin: .5em 0;
+}
+
+.top-page-header{
+  height: 50px;
+}
+
+
+.top-page-header .navbar-bootswatch .navbar-brand{
+  padding: 0px 0px!important;
+}
+
+
+.top-page-header .navbar {
+  max-height: 54px;
+}
+
+/*header override CSS end*/
+
+
+/*Site buttons override*/
+input.form-submit, input#id_submitbutton, input#id_submitbutton2, .path-admin .buttons input[type="submit"], td.submit input, .btn-primary {
+
+    background-color: #2a4f96;
+    border: 1px solid #2a4f96;
+     border-radius: 5px;
+
+      }
+
+input.form-submit, input#id_submitbutton, input#id_submitbutton2, .path-admin .buttons input[type="submit"], td.submit input, .btn-primary:hover {
+  background-color: #007bff;
+  border: 1px solid #007bff;
+}
+/*Site buttons override end*/
+
+/*header searchbox override*/
+.cataloghide{
+  display:none!important;
+}
+
+
+.mag{
+    
+    
+    height: 30px;
+    
+}
+
+
+.top-page-header .navbar ul.top-left.customsearch li.newsearch form#searchbox_demo input[type="text"], .top-header ul.top-left.customsearch li.newsearch form#searchbox_demo input[type="text"] {
+    background-color: #fff;
+    border-radius: 0;
+    border: none;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #d9d9d9;
+    box-shadow: none;
+    height: 30px;
+    padding: 4px 12px;
+    color: #555;
+    width: 465px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-left: -13px;
+}
+
+.newsearch{
+  border-radius: 5px;
+}
+
+top-page-header .navbar ul.top-left.customsearch {
+    margin-bottom: 0;
+    margin-right: 40px!important;
+    padding-left: 0;
+}
+
+top-page-header .navbar ul.top-left.customsearch li.newsearch form#searchbox_demo input[type="submit"]{
+  width: 45px!important;
+  height: 30px!important;
+}
+
+.icon fa fa-bell fa-fw:hover{
+  transform: translateY(-4px);
+    transition:0.3s;
+}
+
+.top-page-header .navbar ul.top-left.customsearch li.newsearch, .top-header ul.top-left.customsearch li.newsearch {
+    background-color: #ecf6fd;
+    border: 1px solid #ecf6fd;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+/*header searchbox override end*/
+
+/*Login page button override*/
+body.pagelayout-login #page #page-content #region-main .login-main-wrapper button {
+          border-radius: 0.3rem;
+          background-color: #2a4f96;
+          border: 1px solid #2a4f96;
+          color: #fff;
+}
+
+body.pagelayout-login #page #page-content #region-main .login-main-wrapper button:hover{
+          background-color: #007bff!important;
+          border: 1px solid #007bff;
+}
+
+/*Login page button override end*/
+
+
+
+.top-page-header .navbar {
+  padding: 0.5rem 1rem;
+}
+
+.fa-bell:hover{
+  transform: translateY(-4px);
+    transition:0.3s;
+}
+
+.fa-comment:hover{
+  transform: translateY(-4px);
+    transition:0.3s;
+}
+
+.test1{
+      padding-left: 40px;
+      font-size: 11.52px;
+}
+.testgroup{
+  padding-top: 20px;
+}
+
+.test1 a {
+  color: #282829;
+
+}
+
+.navbar-brand{
+  display:none !important;
+} 
+
+#page-content.blocks-post .columnright{
+  display:none;
+}    
+
+#page-my-index .region-main-content{
+  width:150%;
+  margin-left: -64px;
+}  
+
+.hidden-print{
+ margin-left: -87px;
+    }
+
+body#page-mod-resource-view .mediaplugin.mediaplugin_videojs>div{
+  max-width: 700px !important;
+}
+
+

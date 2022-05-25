@@ -1,3 +1,4 @@
+
 <?php
    defined('MOODLE_INTERNAL') || die();
    
@@ -5,6 +6,16 @@
    require_once($CFG->libdir . '/behat/lib.php');
    //require_once(dirname(__FILE__).'/fonts.php');
    
+   
+if(isset($_GET['content']) && $_GET['content'] == 'true'){
+	$_SESSION['content'] = 'true';
+}
+
+if(isset($_GET['content']) && $_GET['content'] == 'false'){
+	$_SESSION['content'] = 'false';
+}
+
+
    
    // General Settings
    
